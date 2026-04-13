@@ -6,9 +6,9 @@
     <title>The Elite Performance Protocol</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        /* BASE STYLING */
+        /* CORE ARCHITECTURE */
         body {
-            background-color: #000000; /* True Black */
+            background-color: #000000;
             color: #FFFFFF;
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -27,44 +27,50 @@
             width: 90%;
         }
 
-        /* LOGO & DIGITAL CROP */
+        /* THE TECHNICAL CROP 
+           We create a small "window" and zoom the image to fit it.
+        */
         .logo-box {
-            margin-bottom: 2rem;
+            margin: 0 auto 1rem auto;
             display: flex;
             justify-content: center;
-            overflow: hidden; /* Helps with the digital crop */
+            align-items: center;
+            height: 140px; /* This is your tight crop box */
+            width: 100%;
+            overflow: hidden; 
+            position: relative;
         }
 
         .logo-img {
-            width: 320px; /* Precise Badge Width */
-            height: 180px; /* Adjust this number to crop top/bottom excess */
-            object-fit: contain; /* Keeps the border geometry perfect */
-            filter: drop-shadow(0px 4px 15px rgba(212, 175, 55, 0.3));
-            background-color: #000000;
+            width: 550px; /* Blows up the image to remove the side margins */
+            height: auto;
+            transform: scale(1.4); /* Zooms in to remove top/bottom excess */
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 20px rgba(212, 175, 55, 0.4));
         }
 
-        /* TYPOGRAPHY */
+        /* BRAND TYPOGRAPHY */
         h1 {
-            color: #D4AF37; /* Luxury Gold */
+            color: #D4AF37;
             font-weight: 700;
             font-size: clamp(1.2rem, 6vw, 1.6rem);
-            letter-spacing: 0.25em; /* Executive Tracking */
+            letter-spacing: 0.25em; /* Lexus-style tracking */
             text-transform: uppercase;
-            margin: 0;
+            margin: 0.5rem 0 0 0;
             line-height: 1.4;
         }
 
         p.subtitle {
-            font-size: 1rem;
-            color: #C0C0C0; /* Brushed Silver */
-            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #C0C0C0;
+            margin-top: 0.5rem;
             font-weight: 300;
             letter-spacing: 0.1em;
         }
 
-        /* CAPTURE FORM */
+        /* CAPTURE INFRASTRUCTURE */
         .form-container {
-            margin-top: 3.5rem;
+            margin-top: 3rem;
             background: #0a0a0a;
             padding: 2.5rem;
             border-top: 1px solid #D4AF37;
@@ -80,7 +86,7 @@
 
         input[type="email"] {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             padding: 15px;
             background: #000;
             border: 1px solid #333;
@@ -88,8 +94,7 @@
             margin-bottom: 1.5rem;
             text-align: center;
             font-family: inherit;
-            font-size: 0.9rem;
-            border-radius: 0; /* Keeps it technical/industrial */
+            border-radius: 0;
             outline: none;
         }
 
@@ -112,10 +117,10 @@
         button:hover {
             background-color: #FBF5B7;
             letter-spacing: 0.2em;
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
-        /* ORIGIN FOOTER */
+        /* FOOTER SPECS */
         .footer-text {
             font-size: 0.7rem;
             color: #444;
