@@ -6,7 +6,7 @@
     <title>The Elite Performance Protocol</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        /* CORE ARCHITECTURE */
+        /* RESET & BASE */
         body {
             background-color: #000000;
             color: #FFFFFF;
@@ -18,7 +18,6 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
-            overflow-x: hidden;
         }
 
         .container {
@@ -27,26 +26,23 @@
             width: 90%;
         }
 
-        /* THE TECHNICAL CROP 
-           We create a small "window" and zoom the image to fit it.
+        /* NEW FLEXIBLE LOGO BOX
+           Since you cropped the file, we let the image determine the height.
         */
         .logo-box {
-            margin: 0 auto 1rem auto;
+            margin: 0 auto 1.5rem auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 140px; /* This is your tight crop box */
             width: 100%;
-            overflow: hidden; 
-            position: relative;
         }
 
         .logo-img {
-            width: 550px; /* Blows up the image to remove the side margins */
+            width: 100%;
+            max-width: 320px; /* Adjust this to make the logo larger/smaller on screen */
             height: auto;
-            transform: scale(1.4); /* Zooms in to remove top/bottom excess */
-            object-fit: contain;
             filter: drop-shadow(0px 4px 20px rgba(212, 175, 55, 0.4));
+            transition: transform 0.3s ease;
         }
 
         /* BRAND TYPOGRAPHY */
@@ -54,9 +50,9 @@
             color: #D4AF37;
             font-weight: 700;
             font-size: clamp(1.2rem, 6vw, 1.6rem);
-            letter-spacing: 0.25em; /* Lexus-style tracking */
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            margin: 0.5rem 0 0 0;
+            margin: 1rem 0 0 0;
             line-height: 1.4;
         }
 
@@ -68,7 +64,7 @@
             letter-spacing: 0.1em;
         }
 
-        /* CAPTURE INFRASTRUCTURE */
+        /* CONVERSION SECTION */
         .form-container {
             margin-top: 3rem;
             background: #0a0a0a;
@@ -116,11 +112,11 @@
 
         button:hover {
             background-color: #FBF5B7;
-            letter-spacing: 0.2em;
             transform: scale(1.03);
+            cursor: pointer;
         }
 
-        /* FOOTER SPECS */
+        /* ORIGIN FOOTER */
         .footer-text {
             font-size: 0.7rem;
             color: #444;
