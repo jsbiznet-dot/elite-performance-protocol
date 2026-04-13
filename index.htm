@@ -6,8 +6,9 @@
     <title>The Elite Performance Protocol</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <style>
+        /* BASE STYLING */
         body {
-            background-color: #000000;
+            background-color: #000000; /* True Black */
             color: #FFFFFF;
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -17,83 +18,110 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 600px;
             padding: 2rem;
+            width: 90%;
         }
 
-        /* LOGO STYLING */
+        /* LOGO & DIGITAL CROP */
         .logo-box {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            overflow: hidden; /* Helps with the digital crop */
         }
 
         .logo-img {
-            max-width: 280px;
-            height: auto;
-            /* Subtle drop shadow to simulate a physical badge */
-            filter: drop-shadow(0px 4px 10px rgba(212, 175, 55, 0.2));
+            width: 320px; /* Precise Badge Width */
+            height: 180px; /* Adjust this number to crop top/bottom excess */
+            object-fit: contain; /* Keeps the border geometry perfect */
+            filter: drop-shadow(0px 4px 15px rgba(212, 175, 55, 0.3));
+            background-color: #000000;
         }
 
-        /* HEADLINE STYLING */
+        /* TYPOGRAPHY */
         h1 {
-            color: #D4AF37;
+            color: #D4AF37; /* Luxury Gold */
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 6vw, 1.6rem);
             letter-spacing: 0.25em; /* Executive Tracking */
             text-transform: uppercase;
             margin: 0;
+            line-height: 1.4;
         }
 
         p.subtitle {
             font-size: 1rem;
             color: #C0C0C0; /* Brushed Silver */
-            margin-top: 0.5rem;
+            margin-top: 0.75rem;
             font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        /* CAPTURE FORM */
+        .form-container {
+            margin-top: 3.5rem;
+            background: #0a0a0a;
+            padding: 2.5rem;
+            border-top: 1px solid #D4AF37;
+            border-bottom: 1px solid #D4AF37;
+        }
+
+        .form-instruction {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
             letter-spacing: 0.05em;
         }
 
-        /* FORM STYLING */
-        .form-container {
-            margin-top: 3rem;
-            background: #111111;
-            padding: 2rem;
-            border-top: 1px solid #D4AF37;
-        }
-
         input[type="email"] {
-            width: 80%;
-            padding: 12px;
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
             background: #000;
             border: 1px solid #333;
             color: #fff;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
+            font-family: inherit;
+            font-size: 0.9rem;
+            border-radius: 0; /* Keeps it technical/industrial */
+            outline: none;
+        }
+
+        input[type="email"]:focus {
+            border-color: #D4AF37;
         }
 
         button {
             background-color: #D4AF37;
             color: #000;
             border: none;
-            padding: 15px 30px;
+            padding: 18px 40px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
         button:hover {
-            background-color: #FBF5B7; /* Shimmer effect */
-            transform: translateY(-2px);
+            background-color: #FBF5B7;
+            letter-spacing: 0.2em;
+            transform: scale(1.02);
         }
 
+        /* ORIGIN FOOTER */
         .footer-text {
             font-size: 0.7rem;
             color: #444;
-            margin-top: 4rem;
-            letter-spacing: 0.1em;
+            margin-top: 5rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -101,18 +129,19 @@
 
     <div class="container">
         <div class="logo-box">
-            <img src="edited-image.png" alt="Elite Performance" class="logo-img">
+            <img src="edited-image.png" alt="Elite Performance Protocol" class="logo-img">
         </div>
 
         <h1>Elite Performance Protocol</h1>
         <p class="subtitle">Structural Calibration for the Lexus Executive</p>
 
         <div class="form-container">
-            <p>Access the 5-Minute System Reboot Audio & The Evidence Exhibit</p>
-            <form action="YOUR_MAILCHIMP_OR_CONVERTKIT_URL" method="POST">
-                <input type="email" name="EMAIL" placeholder="EXECUTIVE EMAIL" required>
+            <p class="form-instruction">Enter your executive email to initialize the <br><strong>5-Minute Neural Reboot</strong></p>
+            
+            <form action="YOUR_ENDPOINT_HERE" method="POST">
+                <input type="email" name="email" placeholder="EXECUTIVE EMAIL" required>
                 <br>
-                <button type="submit">Initialize Reboot</button>
+                <button type="submit">Initialize Protocol</button>
             </form>
         </div>
 
