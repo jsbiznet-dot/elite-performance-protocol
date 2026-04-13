@@ -6,7 +6,7 @@
     <title>The Elite Performance Protocol</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        /* RESET & BASE */
+        /* GLOBAL CALIBRATION */
         body {
             background-color: #000000;
             color: #FFFFFF;
@@ -26,47 +26,47 @@
             width: 90%;
         }
 
-        /* NEW FLEXIBLE LOGO BOX
-           Since you cropped the file, we let the image determine the height.
+        /* LOGO ASSET: 
+           Optimized for your manual crop.
         */
         .logo-box {
             margin: 0 auto 1.5rem auto;
+            width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 100%;
         }
 
         .logo-img {
             width: 100%;
-            max-width: 320px; /* Adjust this to make the logo larger/smaller on screen */
+            max-width: 380px; /* Increased slightly for desktop impact */
             height: auto;
             filter: drop-shadow(0px 4px 20px rgba(212, 175, 55, 0.4));
-            transition: transform 0.3s ease;
         }
 
-        /* BRAND TYPOGRAPHY */
+        /* TYPOGRAPHY: 
+           Matches the wider letter-spacing of high-end branding.
+        */
         h1 {
             color: #D4AF37;
             font-weight: 700;
-            font-size: clamp(1.2rem, 6vw, 1.6rem);
-            letter-spacing: 0.25em;
+            font-size: clamp(1.2rem, 6vw, 1.7rem);
+            letter-spacing: 0.25em; 
             text-transform: uppercase;
-            margin: 1rem 0 0 0;
+            margin: 1.5rem 0 0 0;
             line-height: 1.4;
         }
 
         p.subtitle {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #C0C0C0;
             margin-top: 0.5rem;
             font-weight: 300;
             letter-spacing: 0.1em;
         }
 
-        /* CONVERSION SECTION */
+        /* LEAD CAPTURE BLOCK */
         .form-container {
-            margin-top: 3rem;
+            margin-top: 3.5rem;
             background: #0a0a0a;
             padding: 2.5rem;
             border-top: 1px solid #D4AF37;
@@ -75,15 +75,15 @@
 
         .form-instruction {
             margin-bottom: 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #888;
             letter-spacing: 0.05em;
         }
 
         input[type="email"] {
             width: 100%;
-            max-width: 280px;
-            padding: 15px;
+            max-width: 300px;
+            padding: 16px;
             background: #000;
             border: 1px solid #333;
             color: #fff;
@@ -92,6 +92,7 @@
             font-family: inherit;
             border-radius: 0;
             outline: none;
+            font-size: 1rem;
         }
 
         input[type="email"]:focus {
@@ -102,24 +103,25 @@
             background-color: #D4AF37;
             color: #000;
             border: none;
-            padding: 18px 40px;
+            padding: 18px 45px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         button:hover {
             background-color: #FBF5B7;
-            transform: scale(1.03);
-            cursor: pointer;
+            letter-spacing: 0.2em;
+            transform: scale(1.02);
         }
 
-        /* ORIGIN FOOTER */
+        /* FOOTER ORIGIN */
         .footer-text {
-            font-size: 0.7rem;
-            color: #444;
+            font-size: 0.75rem;
+            color: #333;
             margin-top: 5rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
