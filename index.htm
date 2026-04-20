@@ -3,139 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Elite Performance Protocol</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <title>Protocol Active | The Apex Driver</title>
     <style>
-        /* BRAND ARCHITECTURE */
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 2rem;
-            width: 90%;
-        }
-
-        .logo-box {
-            margin: 0 auto 1.5rem auto;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .logo-img {
-            width: 100%;
-            max-width: 380px;
-            height: auto;
-            filter: drop-shadow(0px 4px 20px rgba(212, 175, 55, 0.4));
-        }
-
-        h1 {
-            color: #D4AF37;
-            font-weight: 700;
-            font-size: clamp(1.2rem, 6vw, 1.6rem);
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            margin: 1rem 0;
-        }
-
-        .subtitle {
-            font-size: 0.85rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #C0C0C0;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        .form-container {
-            background: rgba(10, 10, 10, 0.8);
-            padding: 2.5rem;
-            border: 1px solid #222;
-        }
-
-        .form-instruction {
-            font-size: 0.9rem;
-            line-height: 1.8;
-            letter-spacing: 0.05em;
-            margin-bottom: 2rem;
-            color: #FFFFFF;
-        }
-
-        input[type="email"] {
-            background-color: #000;
-            border: 1px solid #444;
-            color: #FFF;
-            padding: 15px;
-            width: 80%;
-            max-width: 300px;
-            text-align: center;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.2em;
-            margin-bottom: 1.5rem;
-            outline: none;
-            transition: border 0.3s ease;
-        }
-
-        input[type="email"]:focus {
-            border-color: #D4AF37;
-        }
-
-        button {
-            background-color: #D4AF37;
-            color: #000;
-            border: none;
-            padding: 18px 35px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            width: 80%;
-            max-width: 300px;
-        }
-
-        button:hover {
-            background-color: #FBF5B7;
-            transform: scale(1.02);
-        }
-
-        .footer-text {
-            font-size: 0.75rem;
-            color: #333;
-            margin-top: 5rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
+        body { background-color: #050505; color: #ffffff; font-family: sans-serif; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .container { text-align: center; padding: 20px; max-width: 500px; width: 90%; border: 1px solid #1a1a1a; border-radius: 8px; background: #0a0a0a; }
+        .status { color: #00ff00; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+        h2 { font-size: 1.5rem; margin-bottom: 25px; }
+        audio { width: 100%; margin-bottom: 30px; filter: invert(100%); }
+        .upsell-box { border-top: 1px solid #333; padding-top: 30px; margin-top: 20px; }
+        h3 { color: #D4AF37; font-size: 1.2rem; margin-bottom: 10px; }
+        .price { font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; }
+        .buy-btn { display: inline-block; width: 100%; padding: 18px; background-color: #ffffff; color: #000; text-decoration: none; border-radius: 4px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .buy-btn:hover { background-color: #cccccc; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo-box">
-            <img src="edited-image.png" alt="Elite Performance Protocol" class="logo-img">
+        <div class="status">● System Active</div>
+        <h2>Take 2: In-Motion Calibration</h2>
+        
+        <audio controls>
+            <source src="protocol-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="upsell-box">
+            <h3>Master the Cockpit</h3>
+            <p style="color: #888; font-size: 0.9rem;">Download the full 10-Point Core Manual. Includes the complete geometric seat-setting blueprint.</p>
+            <div class="price">$39.00</div>
+            <a href="#" class="buy-btn">Download Full Manual</a>
         </div>
-        <h1>Elite Performance Protocol</h1>
-        <p class="subtitle">Structural Calibration for the Lexus Executive</p>
-        <div class="form-container">
-            <p class="form-instruction">Enter your executive email to initialize the <br><strong>5-Minute Neural Reboot</strong></p>
-            <form action="https://formspree.io/f/mjgjvwqo" method="POST">
-                <input type="email" name="email" placeholder="EXECUTIVE EMAIL" required>
-                <br>
-                <button type="submit">Initialize Protocol</button>
-            </form>
-        </div>
-        <div class="footer-text">BY SFB.LLC SINCE 2002 | NAPLES, FL | DC</div>
     </div>
 </body>
 </html>
