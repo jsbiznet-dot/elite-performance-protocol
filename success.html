@@ -3,189 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocol Initialized | Elite Performance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <title>Protocol Active | The Apex Driver</title>
     <style>
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
         }
-
-        .container {
-            max-width: 600px;
-            padding: 2rem;
-            width: 90%;
-        }
-
-        .logo-img {
-            width: 100%;
-            max-width: 240px;
-            height: auto;
-            margin-top: 2rem;
-            filter: drop-shadow(0px 4px 15px rgba(212, 175, 55, 0.3));
-        }
-
-        h1 {
-            color: #D4AF37;
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin: 2rem 0;
-        }
-
-        /* AUDIO INTERFACE */
-        .player-box {
+        .container { 
+            text-align: center; 
+            padding: 30px; 
+            max-width: 450px; 
+            width: 90%; 
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
             background: #0a0a0a;
-            padding: 2.5rem;
-            border: 1px solid #D4AF37;
-            margin-bottom: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.9);
         }
-
-        .status-tag {
-            font-size: 0.7rem;
-            letter-spacing: 0.4em;
-            color: #D4AF37;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        audio {
-            width: 100%;
-            filter: invert(100%) hue-rotate(180deg) brightness(1.5);
-            margin: 1rem 0;
-        }
-
-        .instruction {
-            font-size: 0.9rem;
-            color: #C0C0C0;
-            line-height: 1.6;
-        }
-
-        /* THE $39 UPSell */
-        .upsell-box {
-            border-top: 1px solid #222;
-            padding-top: 3rem;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            letter-spacing: 0.1em;
-            line-height: 1.4;
-            margin-bottom: 1.5rem;
-            color: #FFF;
-        }
-
-        .benefit-list {
-            text-align: left;
-            margin: 1.5rem auto;
-            max-width: 380px;
-            font-size: 0.85rem;
-            color: #888;
-            list-style: none;
-            padding: 0;
-        }
-
-        .benefit-list li {
-            margin-bottom: 0.7rem;
-            display: flex;
-        }
-
-        .benefit-list li::before {
-            content: "→";
-            color: #D4AF37;
-            margin-right: 12px;
-            font-weight: bold;
-        }
-
-        .pricing {
-            margin: 2rem 0 1.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #555;
-            margin-right: 10px;
-        }
-
-        .new-price {
-            color: #D4AF37;
-            font-weight: 700;
-        }
-
-        .cta-button {
-            background-color: #D4AF37;
-            color: #000;
-            border: none;
-            padding: 20px;
-            width: 100%;
-            max-width: 350px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
+        .status-light {
             display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #00ff00;
+            animation: pulse 2s infinite;
         }
-
-        .cta-button:hover {
-            background-color: #FBF5B7;
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        .status-text {
+            color: #00ff00;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        h2 { 
+            font-size: 1.6rem; 
+            margin-bottom: 10px; 
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        p.subtitle {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        audio { 
+            width: 100%; 
+            margin-bottom: 40px; 
+            filter: invert(90%) hue-rotate(180deg) brightness(1.5); 
+        }
+        .upsell-card { 
+            border-top: 1px solid #222; 
+            padding-top: 30px; 
+            margin-top: 10px; 
+        }
+        .upsell-card h3 { 
+            color: #D4AF37; 
+            font-size: 1.1rem; 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .upsell-card p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .buy-btn { 
+            display: block;
+            width: 100%; 
+            padding: 18px; 
+            background-color: #ffffff; 
+            color: #000; 
+            text-decoration: none;
+            border-radius: 4px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        .buy-btn:hover { 
+            background-color: #D4AF37; 
             transform: translateY(-2px);
         }
-
-        .footer-text {
-            font-size: 0.7rem;
-            color: #333;
-            margin: 5rem 0 2rem 0;
-            letter-spacing: 0.2em;
+        .coming-soon {
+            margin-top: 15px;
+            font-size: 0.65rem;
+            color: #444;
             text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer { 
+            margin-top: 40px; 
+            font-size: 0.6rem; 
+            color: #222; 
+            letter-spacing: 1px; 
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="edited-image.png" alt="EP Logo" class="logo-img">
-        <h1>Protocol Initialized</h1>
+        <div class="status-text"><span class="status-light"></span> Protocol Active</div>
+        
+        <h2>COMMUTE COACH: TAKE 1</h2>
+        <p class="subtitle">5-Minute In-Motion Calibration</p>
+        
+        <audio controls controlsList="nodownload">
+            <source src="commute-coach-take-1.m4a" type="audio/x-m4a">
+            Your browser does not support the audio element.
+        </audio>
 
-        <div class="player-box">
-            <span class="status-tag">Live Calibration Active</span>
-            <p class="instruction">Connect to your vehicle audio. Hands at 9 and 3.<br>Press play to begin your transition.</p>
-            <audio controls controlsList="nodownload">
-                <source src="protocol-audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div class="upsell-box">
-            <h2>Don't Leave Your Performance in the Driver's Seat.</h2>
-            <p class="instruction">The audio is the tuning session. The <strong>Core Manual</strong> is the blueprint. Protect your spine for the other 23 hours of the day.</p>
+        <div class="upsell-card">
+            <h3>The Core Manual</h3>
+            <p>Master the 10-point structural alignment protocol and the geometric seat-setting blueprint.</p>
+            <div class="price-tag">$39</div>
             
-            <ul class="benefit-list">
-                <li>10-Point Elite Cockpit Blueprint</li>
-                <li>The "Sedentary Trap" Office Intervention</li>
-                <li>Strategic Mirror & Lumbar Calibration</li>
-                <li>Authorized Owner Performance SOP</li>
-            </ul>
-
-            <div class="pricing">
-                <span class="old-price">VALUE: $150</span>
-                <span class="new-price">OWNER PRICING: $39</span>
-            </div>
-
-            <a href="YOUR_STRIPE_OR_CHECKOUT_LINK" class="cta-button">Get The Core Manual</a>
+            <a href="YOUR_PAYMENT_LINK_HERE" class="buy-btn">Download Full Manual</a>
+            <div class="coming-soon">Metabolic Fueling Guide: Deployment in Progress</div>
         </div>
 
-        <div class="footer-text">BY SFB.LLC SINCE 2002 | NAPLES, FL | DC</div>
+        <div class="footer">AUTHENTICATED ACCESS | THE APEX DRIVER</div>
     </div>
+
 </body>
 </html>
